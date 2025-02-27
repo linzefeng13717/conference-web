@@ -62,23 +62,6 @@ const router = createRouter({
           component: () => import('@/views/program/AcceptedPapers.vue')
         }
       ]
-    },
-    {
-      path: '/registration',
-      component: () => import('@/views/registration/RegistrationLayout.vue'),
-      redirect: '/registration/guidelines',
-      children: [
-        {
-          path: 'venue',
-          name: 'Venue',
-          component: () => import('@/views/registration/Venue.vue')
-        },
-        {
-          path: 'guidelines',
-          name: 'Guidelines',
-          component: () => import('@/views/registration/Guidelines.vue')
-        }
-      ]
     }
   ]
 })

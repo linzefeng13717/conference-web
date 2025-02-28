@@ -1,20 +1,24 @@
 <template>
   <div class="home">
     <div class="hero-section">
-      <img src="https://img1.qunarzz.com/travel/d4/1808/54/b16fa07503233b5.jpg_r_640x480x70_d4008e38.jpg" 
+      <img src="@/assets/BG.png" 
            alt="Conference Banner"
            class="hero-image">
       <div class="hero-content">
         <h1 class="conference-title">
-          THE 14TH CCF INTERNATIONAL SYMPOSIUM ON<br>
-          ADVANCED PARALLEL PROCESSING TECHNOLOGY
+          The 16th International Symposium on<br>
+          Advanced Parallel Processing Technology (APPT)
         </h1>
+        <h2 class="conference-location">Athens, Greece · July 13-17, 2025</h2>
       </div>
     </div>
 
     <div class="content-section">
       <div class="about-section">
         <h2>About APPT</h2>
+        <p>
+          <b>APPT aims to provide an ideal forum for thought-provoking ideas. The theme for APPT 2025 is: <span class="theme-highlight">Computing Reimagined</span></b>
+        </p>
         <p>
           APPT is a flagship biennial international conference of the <b>China Computer Federation (CCF) Technical Committee on Computer Architecture (TCArch) </b>. It has become the major forum for Chinese computer architects and system designers to better engage with international colleagues, develop better mutual understanding, and build stronger academic ties. It aims to provide an ideal environment for researchers in both academia and industry to present thought-provoking ideas related to all aspects of computer architecture.
         </p>
@@ -34,7 +38,7 @@
           </div>
         </template>
         <div class="text item" v-show="isExpanded1">
-          This year APPT will be co-located with the <b>27th National Conference of Information Storage</b> (NCIS’21). NCIS is the flagship conference organized by China Computer Federation (CCF) Technical Committee on Information Storage.<br/>Specifically, APPT and NCIS are part of the newly created <b>CCF System Conference (CCFSys)</b>. The technical program for each affiliated conference is independently administered, with each responsible for its own meeting's content and proceedings. This model facilitates communication among researchers in the related fields.
+          This year APPT will be co-located with the <b>27th National Conference of Information Storage</b> (NCIS'21). NCIS is the flagship conference organized by China Computer Federation (CCF) Technical Committee on Information Storage.<br/>Specifically, APPT and NCIS are part of the newly created <b>CCF System Conference (CCFSys)</b>. The technical program for each affiliated conference is independently administered, with each responsible for its own meeting's content and proceedings. This model facilitates communication among researchers in the related fields.
         </div>
       </el-card>
 
@@ -97,10 +101,30 @@ const isExpanded2 = ref(false)
 const isExpanded3 = ref(false)
 
 const importantDates = ref([
-  { event: "Paper Submission", date: "June 1, 2025" },
-  { event: "Notification", date: "July 1, 2025" },
-  { event: "Camera Ready", date: "August 1, 2025" },
-  { event: "Conference", date: "September 1, 2025" }
+  { 
+    event: "Paper Submission (Abstracts)", 
+    date: "March 31, 2025, 11:59PM AOE" 
+  },
+  { 
+    event: "Paper Submission (Full Paper)", 
+    date: "April 06, 2025, 11:59PM AOE" 
+  },
+  { 
+    event: "Paper Notification", 
+    date: "April 27, 2025" 
+  },
+  { 
+    event: "Workshop/Tutorial Proposal", 
+    date: "March 31, 2025, 11:59PM AOE" 
+  },
+  { 
+    event: "WIP/Poster Submission", 
+    date: "April 27, 2025, 11:59PM AOE" 
+  },
+  { 
+    event: "Conference", 
+    date: "July 13-17, 2025" 
+  }
 ])
 </script>
 
@@ -119,7 +143,7 @@ const importantDates = ref([
 
     .hero-content {
       position: absolute;
-      top: 66%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
@@ -130,6 +154,13 @@ const importantDates = ref([
         font-size: 2.5rem;
         font-weight: bold;
         line-height: 1.4;
+      }
+
+      .conference-location {
+        font-size: 1.8rem;
+        margin-top: 1rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       }
     }
   }
@@ -153,6 +184,11 @@ const importantDates = ref([
         font-size: 1.2rem;
         line-height: 2;
       }
+
+      .theme-highlight {
+        color: #007bff;  // 将黄色 #FFD700 改为蓝色 #007bff
+        font-weight: bold;
+      }
     }
 
     .important-dates {
@@ -165,12 +201,24 @@ const importantDates = ref([
 
       .date-cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 20px;
 
         .date-card {
           text-align: center;
           transition: transform 0.3s;
+          padding: 15px;
+
+          h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+          }
+
+          p {
+            color: #666;
+            font-size: 0.9rem;
+          }
 
           &:hover {
             transform: translateY(-5px);

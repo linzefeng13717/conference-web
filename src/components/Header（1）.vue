@@ -11,7 +11,7 @@
         :router="true"
         class="nav-menu"
         :ellipsis="false"
-        background-color="#004380"
+        background-color="darkblue"
         text-color="white"
         active-text-color="white">
         <el-menu-item index="/">Home</el-menu-item>
@@ -47,7 +47,7 @@
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: #004380;
+  background: darkblue;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 0;
 
@@ -81,7 +81,7 @@
   .nav-menu {
     border: none;
     flex: 1;
-    background-color: #004380;
+    background-color: darkblue;
     justify-content: flex-start;
     margin-left: 40px;
 

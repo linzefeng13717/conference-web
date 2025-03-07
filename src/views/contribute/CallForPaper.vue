@@ -1,65 +1,67 @@
 <template>
   <page-base title="Call For Paper">
-    <div class="topics-section">
-      <h2>Topics of Interest</h2>
-      <div class="topics-content">
-        <p>
-          We invite original paper submissions related to (but not limited to) the following topics:
-        </p>
-        <ul>
-          <li><b>Parallel Architectures and Hardware Systems</b></li>
+    <div class="content-section">
+      <div class="topics-section">
+        <h2>Topics of Interest</h2>
+        <div class="topics-content">
           <p>
-            - General-purpose and domain-specific parallel architectures and accelerators<br/>
-            - Memory systems for parallel and distributed systems<br/>
-            - Networks and interconnects<br/>
-            - Parallel I/O and storage systems<br/>
-            - Power-efficient architectures<br/>
-            - Warehouse-scale computer architectures and systems<br/>
-            - Parallel and distributed embedded systems
+            We invite original paper submissions related to (but not limited to) the following topics:
           </p>
-          <li><b>Software Foundations for Parallel Computing</b></li>
-          <p>
-            - Parallel programming languages, programming models and compilers<br/>
-            - Domain-specific languages for parallel and distributed systems<br/>
-            - Programming environments and tools<br/>
-            - Runtime systems<br/>
-            - Operating systems and system virtualization<br/>
-            - Resource management<br/>
-            - High availability, reliability and fault tolerance<br/>
-            - Scalability in parallel systems and software<br/>
-            - Performance modeling, analysis and tuning tools
-          </p>
-          <li><b>Distributed and Cloud computing</b></li>
-          <p>
-            - Reliability, availability and security in distributed and cloud systems<br/>
-            - Distributed and cloud storage systems<br/>
-            - Distributed caching, and query processing<br/>
-            - Workload characterization of cloud systems<br/>
-            - Managing, debugging, and diagnosing of cloud systems<br/>
-            - Peer-to-peer computing<br/>
-            - Grid computing<br/>
-            - Pervasive and mobile computing architectures
-          </p>
-          <li><b>Parallel Algorithms and Applications</b></li>
-          <p>
-            - Design and analysis of novel numerical and combinatorial parallel algorithms<br/>
-            - Protocols for resource management<br/>
-            - Communication and synchronization on parallel and distributed systems<br/>
-            - Parallel algorithms handling power, mobility, and resilience<br/>
-            - Massively parallel applications<br/>
-            - Fault-tolerance of algorithms<br/>
-            - Network algorithms, scheduling and load balancing
-          </p>
-          <li><b>System Support for Emerging Applications</b></li>
-          <p>
-            - Natural language processing<br/>
-            - Speech synthesis and recognition<br/>
-            - Computer vision<br/>
-            - Secure architecture<br/>
-            - Trusted computing, Block Chain<br/>
-            - Quantum computing
-          </p>
-        </ul>
+          <ul>
+            <li><b>Parallel Architectures and Hardware Systems</b></li>
+            <p>
+              - General-purpose and domain-specific parallel architectures and accelerators<br/>
+              - Memory systems for parallel and distributed systems<br/>
+              - Networks and interconnects<br/>
+              - Parallel I/O and storage systems<br/>
+              - Power-efficient architectures<br/>
+              - Warehouse-scale computer architectures and systems<br/>
+              - Parallel and distributed embedded systems
+            </p>
+            <li><b>Software Foundations for Parallel Computing</b></li>
+            <p>
+              - Parallel programming languages, programming models and compilers<br/>
+              - Domain-specific languages for parallel and distributed systems<br/>
+              - Programming environments and tools<br/>
+              - Runtime systems<br/>
+              - Operating systems and system virtualization<br/>
+              - Resource management<br/>
+              - High availability, reliability and fault tolerance<br/>
+              - Scalability in parallel systems and software<br/>
+              - Performance modeling, analysis and tuning tools
+            </p>
+            <li><b>Distributed and Cloud computing</b></li>
+            <p>
+              - Reliability, availability and security in distributed and cloud systems<br/>
+              - Distributed and cloud storage systems<br/>
+              - Distributed caching, and query processing<br/>
+              - Workload characterization of cloud systems<br/>
+              - Managing, debugging, and diagnosing of cloud systems<br/>
+              - Peer-to-peer computing<br/>
+              - Grid computing<br/>
+              - Pervasive and mobile computing architectures
+            </p>
+            <li><b>Parallel Algorithms and Applications</b></li>
+            <p>
+              - Design and analysis of novel numerical and combinatorial parallel algorithms<br/>
+              - Protocols for resource management<br/>
+              - Communication and synchronization on parallel and distributed systems<br/>
+              - Parallel algorithms handling power, mobility, and resilience<br/>
+              - Massively parallel applications<br/>
+              - Fault-tolerance of algorithms<br/>
+              - Network algorithms, scheduling and load balancing
+            </p>
+            <li><b>System Support for Emerging Applications</b></li>
+            <p>
+              - Natural language processing<br/>
+              - Speech synthesis and recognition<br/>
+              - Computer vision<br/>
+              - Secure architecture<br/>
+              - Trusted computing, Block Chain<br/>
+              - Quantum computing
+            </p>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -90,31 +92,46 @@ const importantDates = ref([
 </script>
 
 <style lang="scss" scoped>
-.topics-section {
-  margin-bottom: 40px;
-  
-  h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
+.content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 
-  .topics-content {
+  .topics-section {
     max-width: 800px;
     margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
     
-    p {
-      margin-bottom: 20px;
-      line-height: 1.6;
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
     }
 
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
+    .topics-content {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 35px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       
-      li {
-        margin-bottom: 10px;
+      p {
+        margin-bottom: 20px;
         line-height: 1.6;
+      }
+
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        
+        li {
+          margin-bottom: 10px;
+          line-height: 1.6;
+        }
       }
     }
   }

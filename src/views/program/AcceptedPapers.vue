@@ -23,45 +23,6 @@
         </p>
       </div>
     </div>
-        <!-- <el-input
-          v-model="searchQuery"
-          placeholder="Search papers..."
-          prefix-icon="el-icon-search"
-          class="search-input"
-        />
-      </div>
-
-      <div class="papers-list">
-        <el-collapse>
-          <el-collapse-item v-for="(session, index) in sessions" :key="index">
-            <template #title>
-              <h3 class="session-title">{{ session.title }}</h3>
-            </template>
-            
-            <div class="paper-items">
-            <p>{{session.text}}</p> -->
-              <!-- <div v-for="(paper, pIndex) in session.papers" 
-                   :key="pIndex"
-                   class="paper-item">
-                <h4>{{ paper.title }}</h4> -->
-                <!-- <p class="authors">{{ paper.authors.join(', ') }}</p> -->
-                <!-- <p class="affiliation">{{ paper.affiliation }}</p> -->
-                <!-- <el-button type="text" @click="showAbstract(paper)">
-                  View Abstract
-                </el-button> -->
-              <!-- </div> -->
-            <!-- </div>
-          </el-collapse-item>
-        </el-collapse>
-      </div>
-    </div> -->
-<!-- 
-    <el-dialog
-      v-model="dialogVisible"
-      :title="selectedPaper?.title"
-      width="50%">
-      <p>{{ selectedPaper?.abstract }}</p>
-    </el-dialog> -->
   </page-base>
 </template>
 
@@ -86,30 +47,6 @@ const sessions = ref([
     title: 'Robustness Assessment of Asynchronous Advantage Actor-Critic Based on Dynamic Skewness and Sparseness Computation: A Parallel Computing View',
     text: 'Tong Chen, Ji-Qiang Liu, He Li, Shuo-Ru Wang, Wen-Jia Niu, En-Dong Tong (Beijing Jiaotong University), Liang Chang (Guilin University of Electronic Technology), Qi Alfred Chen ( University of California, Irvine), Gang Li (Deakin University)'
   }
-  // {
-  //   title: 'Parallel Algorithms',
-  //   papers: [
-  //     {
-  //       title: 'A Novel Approach to Distributed Computing',
-  //       authors: ['John Smith', 'Mary Johnson'],
-  //       affiliation: 'University of Technology',
-  //       abstract: 'This paper presents a novel approach to distributed computing...'
-  //     },
-  //     // More papers...
-  //   ]
-  // },
-  // {
-  //   title: 'Machine Learning Systems',
-  //   papers: [
-  //     {
-  //       title: 'Efficient Parallel Training for Large Models',
-  //       authors: ['David Chen', 'Sarah Wilson'],
-  //       affiliation: 'AI Research Institute',
-  //       abstract: 'We propose an efficient method for parallel training...'
-  //     },
-  //     // More papers...
-  //   ]
-  // }
 ])
 
 const showAbstract = (paper) => {
@@ -123,7 +60,7 @@ const showAbstract = (paper) => {
 .papers-container {
   .papers-header {
     margin-bottom: 40px;
-    text-align: center;
+    text-align: left;
 
     h2 {
       font-size: 2rem;

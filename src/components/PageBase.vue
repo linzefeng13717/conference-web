@@ -18,7 +18,7 @@ defineProps({
   },
   bannerImage: {
     type: String,
-    default: "https://img1.qunarzz.com/travel/d4/1808/54/b16fa07503233b5.jpg_r_640x480x70_d4008e38.jpg"
+    default: '/images/BG4.jpg'
   }
 })
 </script>
@@ -26,14 +26,20 @@ defineProps({
 <style lang="scss" scoped>
 .page-container {
   .hero-banner {
+    padding: 10px 10px;
+    background-color: #fff;
     position: relative;
     height: 33vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 
     .banner-image {
-      width: 100%;
+      width: 72.5%;
       height: 100%;
+      border-radius: 15px;
       object-fit: cover;
+      object-position: 0 30%;
     }
 
     .page-title {

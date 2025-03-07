@@ -1,5 +1,28 @@
 <template>
   <footer class="footer">
+    <!-- Sponsors Section -->
+    <div class="sponsors-section">
+      <div class="sponsor-tier">
+        <h2>Diamond Sponsors</h2>
+        <div class="sponsor-logos">
+          <!-- 赞助商logo -->
+        </div>
+      </div>
+      <div class="sponsor-tier">
+        <h2>Platinum Sponsors</h2>
+        <div class="sponsor-logos">
+          <!-- 赞助商logo -->
+        </div>
+      </div>
+      <div class="sponsor-tier">
+        <h2>Gold Sponsors</h2>
+        <div class="sponsor-logos">
+          <!-- 赞助商logo -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 原有的 Partners Section
     <div class="partners-section">
       <h2 class="section-title">PARTNERS & SPONSORS</h2>
       <div class="footer-content">
@@ -31,17 +54,55 @@
         </div>
       </div>
     </div>
+
     <div class="copyright">
       © Copyright 2025 Design by xxx
-    </div>
+    </div> -->
   </footer>
 </template>
 
 <style lang="scss" scoped>
 .footer {
-  background: #2c3e50;
+  background: #004380;
   color: #fff;
   padding: 40px 0 20px;
+
+  .sponsors-section {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+
+    .sponsor-tier {
+      margin-bottom: 30px;
+
+      h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #fff;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+      }
+
+      .sponsor-logos {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        
+        img {
+          max-height: 60px;
+          filter: brightness(0) invert(1); // 使logo变为白色
+          opacity: 0.8;
+          transition: opacity 0.3s;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
 
   .partners-section {
     max-width: 1200px;

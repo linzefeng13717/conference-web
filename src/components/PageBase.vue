@@ -5,7 +5,14 @@
       <h1 class="page-title">{{ title }}</h1>
     </div>
     <div class="content">
-      <slot></slot>
+      <div class="content-wrapper">
+        <slot>
+          <div class="placeholder-content">
+            <h2>{{ title }}</h2>
+            <p>This page is under construction. Content will be available soon.</p>
+          </div>
+        </slot>
+      </div>
     </div>
   </div>
 </template>
@@ -18,7 +25,7 @@ defineProps({
   },
   bannerImage: {
     type: String,
-    default: '/images/BG4.jpg'
+    default: '/public/images/BG4.jpg'
   }
 })
 </script>
@@ -33,6 +40,7 @@ defineProps({
     overflow: hidden;
     display: flex;
     justify-content: center;
+    margin-bottom: 30px;
 
     .banner-image {
       width: 72.5%;
@@ -57,8 +65,26 @@ defineProps({
 
   .content {
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 0 40px 40px;
+
+    .content-wrapper {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    .placeholder-content {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+
+      h2 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 </style> 

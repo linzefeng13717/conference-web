@@ -9,21 +9,6 @@ const router = createRouter({
       component: () => import('@/views/Home.vue')
     },
     {
-      path: '/contribute',
-      children: [
-        {
-          path: 'call-for-paper',
-          name: 'CallForPaper',
-          component: () => import('@/views/contribute/CallForPaper.vue')
-        },
-        {
-          path: 'submission',
-          name: 'Submission',
-          component: () => import('@/views/contribute/Submission.vue')
-        }
-      ]
-    },
-    {
       path: '/organization',
       children: [
         {
@@ -35,33 +20,113 @@ const router = createRouter({
           path: 'program-committee',
           name: 'ProgramCommittee',
           component: () => import('@/views/organization/ProgramCommittee.vue')
+        },
+        {
+          path: 'steering-committee',
+          name: 'SteeringCommittee',
+          component: () => import('@/views/organization/SteeringCommittee.vue')
         }
       ]
     },
     {
-      path: '/speaker',
-      name: 'Speaker',
-      component: () => import('@/views/Speaker.vue')
+      path: '/contribute',
+      children: [
+        {
+          path: 'call-for-papers',
+          name: 'CallForPapers',
+          component: () => import('@/views/contribute/CallForPaper.vue')
+        },
+        {
+          path: 'submission-guidelines',
+          name: 'SubmissionGuidelines',
+          component: () => import('@/views/contribute/Submission.vue')
+        },
+        {
+          path: 'accepted-papers',
+          name: 'AcceptedPapers',
+          component: () => import('@/views/contribute/AcceptedPapers.vue')
+        },
+        {
+          path: 'camera-ready',
+          name: 'CameraReady',
+          component: () => import('@/views/contribute/CameraReady.vue')
+        }
+      ]
     },
     {
-      path: '/competition',
-      name: 'Competition',
-      component: () => import('@/views/Competition.vue')
+      path: '/parallel-events',
+      children: [
+        {
+          path: 'workshop-tutorial',
+          name: 'WorkshopTutorial',
+          component: () => import('@/views/parallel-events/WorkshopTutorial.vue')
+        },
+        {
+          path: 'tech-forum',
+          name: 'TechForum',
+          component: () => import('@/views/parallel-events/TechForum.vue')
+        },
+        {
+          path: 'phd-forum',
+          name: 'PhDForum',
+          component: () => import('@/views/parallel-events/PhDForum.vue')
+        },
+        {
+          path: 'competition',
+          name: 'StudentCompetition',
+          component: () => import('@/views/parallel-events/Competition.vue')
+        },
+        {
+          path: 'posters-demo',
+          name: 'PostersDemo',
+          component: () => import('@/views/parallel-events/PostersDemo.vue')
+        }
+      ]
+    },
+    {
+      path: '/keynote',
+      name: 'Keynote',
+      component: () => import('@/views/Keynote.vue')
     },
     {
       path: '/program',
+      name: 'Program',
+      component: () => import('@/views/Program.vue')
+    },
+    {
+      path: '/sponsor',
+      name: 'Sponsor',
+      component: () => import('@/views/Sponsor.vue')
+    },
+    {
+      path: '/attend',
       children: [
         {
-          path: 'forums',
-          name: 'Forums',
-          component: () => import('@/views/program/Forums.vue')
+          path: 'venue-hotel',
+          name: 'VenueHotel',
+          component: () => import('@/views/attend/VenueHotel.vue')
         },
         {
-          path: 'papers',
-          name: 'AcceptedPapers',
-          component: () => import('@/views/program/AcceptedPapers.vue')
+          path: 'registration',
+          name: 'Registration',
+          component: () => import('@/views/attend/Registration.vue')
+        },
+        {
+          path: 'visa-info',
+          name: 'VisaInfo',
+          component: () => import('@/views/attend/VisaInfo.vue')
+        },
+        {
+          path: 'travel-grant',
+          name: 'TravelGrant',
+          component: () => import('@/views/attend/TravelGrant.vue')
         }
       ]
+    },
+    {
+      path: '/history',
+      name: 'APPTHistory',
+      component: () => import('@/views/History.vue')
     }
   ]
 })

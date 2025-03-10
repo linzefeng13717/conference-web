@@ -16,26 +16,43 @@
         active-text-color="white">
         <el-menu-item index="/">Home</el-menu-item>
         
-        <el-sub-menu index="contribute">
-          <template #title>Contribute</template>
-          <el-menu-item index="/contribute/call-for-paper">Call for Paper</el-menu-item>
-          <el-menu-item index="/contribute/submission">Submission</el-menu-item>
-        </el-sub-menu>
-
         <el-sub-menu index="organization">
           <template #title>Organization</template>
           <el-menu-item index="/organization/committee">Organization Committee</el-menu-item>
           <el-menu-item index="/organization/program-committee">Program Committee</el-menu-item>
+          <el-menu-item index="/organization/steering-committee">Steering Committee</el-menu-item>
         </el-sub-menu>
 
-        <el-menu-item index="/speaker">Speaker</el-menu-item>
-        <el-menu-item><a href="https://xupsh.github.io/ccc2021/" target="_blank" >Competition</a></el-menu-item>
-        <!-- index="/competition" -->
-        <el-sub-menu index="program">
-          <template #title>Program</template>
-          <el-menu-item index="/program/forums">Forums</el-menu-item>
-          <el-menu-item index="/program/papers">Accepted Papers</el-menu-item>
+        <el-sub-menu index="contribute">
+          <template #title>Contribute</template>
+          <el-menu-item index="/contribute/call-for-papers">Call for Papers</el-menu-item>
+          <el-menu-item index="/contribute/submission-guidelines">Submission Guidelines</el-menu-item>
+          <el-menu-item index="/contribute/accepted-papers">Accepted Papers</el-menu-item>
+          <el-menu-item index="/contribute/camera-ready">Camera Ready Instruction</el-menu-item>
         </el-sub-menu>
+
+        <el-sub-menu index="parallel-events">
+          <template #title>Parallel Events</template>
+          <el-menu-item index="/parallel-events/workshop-tutorial">Workshop & Tutorial</el-menu-item>
+          <el-menu-item index="/parallel-events/tech-forum">Tech Forum</el-menu-item>
+          <el-menu-item index="/parallel-events/phd-forum">PhD Forum</el-menu-item>
+          <el-menu-item index="/parallel-events/competition">Student Competition</el-menu-item>
+          <el-menu-item index="/parallel-events/posters-demo">Posters and Demo</el-menu-item>
+        </el-sub-menu>
+
+        <el-menu-item index="/keynote">Keynote</el-menu-item>
+        <el-menu-item index="/program">Program</el-menu-item>
+        <el-menu-item index="/sponsor">Sponsor</el-menu-item>
+
+        <el-sub-menu index="attend">
+          <template #title>Attend</template>
+          <el-menu-item index="/attend/venue-hotel">Venue & Hotel</el-menu-item>
+          <el-menu-item index="/attend/registration">Registration</el-menu-item>
+          <el-menu-item index="/attend/visa-info">Visa Info</el-menu-item>
+          <el-menu-item index="/attend/travel-grant">Travel Grant</el-menu-item>
+        </el-sub-menu>
+
+        <el-menu-item index="/history">APPT History</el-menu-item>
       </el-menu>
     </div>
   </el-header>

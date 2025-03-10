@@ -125,7 +125,7 @@ onUnmounted(() => {
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 
       .conference-title {
-        font-size: 6rem;
+        font-size: 5.5rem;
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
@@ -138,7 +138,7 @@ onUnmounted(() => {
         }
 
         span {
-          font-size: 6rem;
+          font-size: 5rem;
           line-height: 1;
         }
       }

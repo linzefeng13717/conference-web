@@ -3,14 +3,14 @@
     <div class="carousel-container" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
       <div v-for="(slide, index) in slides" :key="index" class="carousel-slide">
         <img :src="slide.image" :alt="slide.alt" class="carousel-image">
-        <div class="carousel-content">
+        <!-- <div class="carousel-content">
           <h1 class="conference-title">
             <img src="@/assets/logo.png" alt="APPT Logo" class="hero-logo">
             <span>2025</span>
           </h1>
           <h2 class="conference-date">July 13-16, 2025</h2>
           <h2 class="conference-location">Athens, Greece</h2>
-        </div>
+        </div> -->
       </div>
     </div>
     

@@ -11,7 +11,7 @@
                    class="member-card">
             <div class="member-info">
               <div class="avatar">
-                <el-avatar :size="80" src="https://img1.qunarzz.com/travel/d4/1808/54/b16fa07503233b5.jpg_r_640x480x70_d4008e38.jpg"/>
+                <el-avatar :size="80" :src="peopleImage"/>
               </div>
               <div class="details">
                 <h3>{{ member.name }}</h3>
@@ -28,6 +28,13 @@
 <script setup>
 import PageBase from '@/components/PageBase.vue'
 import { ref } from 'vue'
+
+defineProps({
+  peopleImage: {
+    type: String,
+    default: new URL('/public/images/people_default.png', import.meta.url).href
+  }
+})
 
 const committees = ref([
   {

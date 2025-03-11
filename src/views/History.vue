@@ -1,5 +1,5 @@
 <template>
-  <PageBase title="APPT History" :bannerImage="bannerImage">
+  <PageBase title="APPT History">
     <div class="history-content">
       <h2>History and Development of APPT</h2>
       <p class="intro">Advanced Parallel Processing Technologies (APPT) is the flagship international conference organized by the China Computer Federation (CCF) Technical Committee on Computer Architecture (TCArch). It aims to provide an ideal environment for researchers in both academia and industry to present thought-provoking ideas related to all aspects of computer architecture, computing systems, and emerging technologies.</p>

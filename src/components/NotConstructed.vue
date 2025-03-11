@@ -1,7 +1,8 @@
 <template>
-    <PageBase title="Not Constructed">
+    <PageBase title="Available Soon">
         <div class="text_info">
-            <h2>Not constructed yet!</h2>
+            <h2>This event has not been determined yet, but will be available soon.</h2>
+                <h2>Sorry for the inconvenience.</h2>
         </div>
     </PageBase>
 </template>

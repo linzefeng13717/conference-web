@@ -25,7 +25,7 @@ defineProps({
   },
   bannerImage: {
     type: String,
-    default: '/public/images/BG4.jpg'
+    default: new URL('/public/images/BG_others.jpg', import.meta.url).href
   }
 })
 </script>

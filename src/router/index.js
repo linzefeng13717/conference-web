@@ -9,6 +9,11 @@ const router = createRouter({
       component: () => import('@/views/Home.vue')
     },
     {
+      path: '/steering-committee',
+      name: 'SteeringCommittee',
+      component: () => import('@/views/SteeringCommittee.vue')
+    },
+    {
       path: '/organization',
       children: [
         {
@@ -21,11 +26,6 @@ const router = createRouter({
           name: 'ProgramCommittee',
           component: () => import('@/views/organization/ProgramCommittee.vue')
         },
-        {
-          path: 'steering-committee',
-          name: 'SteeringCommittee',
-          component: () => import('@/views/organization/SteeringCommittee.vue')
-        }
       ]
     },
     {

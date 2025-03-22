@@ -11,7 +11,7 @@
       <div class="about-section">
         <h2>About APPT</h2>
         <p class="about-text">
-          Since its establishment in 1995, APPT has evolved into an ideal international forum for presenting thought-provoking ideas and advancing the frontiers of computing systems. This year, the theme of the conference is <span class="theme-highlight">Computing Reimagined</span>. APPT-2025 will mainly focus on the multidisciplinary challenges and innovations shaping the future of computer architecture and intelligent computing. The conference invites original contributions spanning theoretical breakthroughs, system-level optimizations, and real-world applications.
+          Since its establishment in 1995, APPT has evolved into an ideal international forum for presenting thought-provoking ideas and advancing the frontiers of computing systems. This year, the theme of the conference is <b>Computing Reimagined</b>. APPT-2025 will mainly focus on the multidisciplinary challenges and innovations shaping the future of computer architecture and intelligent computing. The conference invites original contributions spanning theoretical breakthroughs, system-level optimizations, and real-world applications.
         </p>
         <p class="slogan">See you all in Athens!</p>
       </div>
@@ -52,20 +52,16 @@ import Carousel from '@/components/Carousel.vue'
 
 const carouselSlides = ref([
   {
-    image: new URL('/public/images/BG1.jpg', import.meta.url).href,
+    image: new URL('/public/images/BG_1.jpg', import.meta.url).href,
     alt: 'Conference Banner 1'
   },
   {
-    image: new URL('/public/images/BG2.jpg', import.meta.url).href,
+    image: new URL('/public/images/BG_2.png', import.meta.url).href,
     alt: 'Conference Banner 2'
   },
   {
-    image: new URL('/public/images/BG3.jpg', import.meta.url).href,
+    image: new URL('/public/images/BG_3.jpg', import.meta.url).href,
     alt: 'Conference Banner 3'
-  },
-  {
-    image: new URL('/public/images/BG4.jpg', import.meta.url).href,
-    alt: 'Conference Banner 4'
   }
 ])
 

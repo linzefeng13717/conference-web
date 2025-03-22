@@ -1,5 +1,5 @@
 <template>
-  <page-base title="Accepted Papers">
+  <!-- <page-base title="Accepted Papers">
     <div class="papers-container"> 
       <div class="papers-header">
         <h2>Accepted Papers</h2>
@@ -23,12 +23,14 @@
         </p>
       </div>
     </div>
-  </page-base>
+  </page-base> -->
+  <NotConstructed />
 </template>
 
 <script setup>
 import PageBase from '@/components/PageBase.vue'
 import { ref } from 'vue'
+import NotConstructed from '@/components/NotConstructed.vue'
 
 const searchQuery = ref('')
 const dialogVisible = ref(false)

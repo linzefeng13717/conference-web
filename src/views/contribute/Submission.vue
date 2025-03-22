@@ -4,12 +4,12 @@
       <!-- <h2>Submission Guidelines</h2> -->
       <div class="guidelines-content">
         <p>
-          Submitted papers must be unpublished and not currently under consideration elsewhere for publication. Only electronic submissions with PDF format will be considered. Submissions in PDF format should be up to 12 pages (full paper) in the <b>Springer LNCS style</b> , which can be downloaded from the Springer Web site. Priority is given to full papers of significant scientific content. The page limit for technical content (including all tables and figures). Accepted papers will be included in the proceedings of APPT 2021.
+          Submitted papers must be unpublished and not currently under consideration elsewhere for publication. Only electronic submissions with PDF format will be considered. Submissions in PDF format should be up to 12 pages (full paper) in the <b>Springer LNCS style</b> , which can be downloaded from the Springer Web site. Priority is given to full papers of significant scientific content. The page limit for technical content (including all tables and figures). Accepted papers will be included in the proceedings of APPT 2025.
         </p>
 
         <p>
-          <b>The submission web page for APPT 2021 is:</b><br/>
-          <a href="https://easychair.org/conferences/?conf=appt2021"><b>https://easychair.org/conferences/?conf=appt2021</b></a>
+          <b>The submission web page for APPT 2025 is:</b><br/>
+          <a href="https://submission.appt-conference.com/"><b>https://submission.appt-conference.com/</b></a>
         </p>
 
         <p>
@@ -21,7 +21,7 @@
         </p>
 
         <p>
-          APPT 2021 utilizes a double-blind review process. The authors should not apprise any information about their names or institutions in the submitted paper. Besides authors' names and institutions, other hints of identity should also be removed from the submitted paper. The authors should also be careful when naming files mentioned in the paper, for example, file names like Joe.Smith.dvi should be removed.
+          APPT 2025 utilizes a double-blind review process. The authors should not apprise any information about their names or institutions in the submitted paper. Besides authors' names and institutions, other hints of identity should also be removed from the submitted paper. The authors should also be careful when naming files mentioned in the paper, for example, file names like Joe.Smith.dvi should be removed.
         </p>
 
         <p>

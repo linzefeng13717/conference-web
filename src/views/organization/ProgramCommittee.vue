@@ -16,11 +16,11 @@ import PageBase from '@/components/PageBase.vue'
 import { ref } from 'vue'
 
 const committeeMembers = ref([
-  { name: "Prof. John Smith", affiliation: "University of Technology" },
-  { name: "Dr. Maria Garcia", affiliation: "Research Institute B" },
-  { name: "Prof. David Chen", affiliation: "State University" },
-  { name: "Dr. Sarah Johnson", affiliation: "Institute of Computing" },
-  { name: "Prof. Michael Brown", affiliation: "Technical University" },
+  { name: "TBD", affiliation: "TBD" },
+  { name: "TBD", affiliation: "TBD" },
+  { name: "TBD", affiliation: "TBD" },
+  { name: "TBD", affiliation: "TBD" },
+  { name: "TBD", affiliation: "TBD" },
   // 添加更多委员会成员...
 ])
 </script>

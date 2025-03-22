@@ -16,11 +16,12 @@
         active-text-color="white">
         <el-menu-item index="/">Home</el-menu-item>
         
+        <el-menu-item index="/steering-committee">Steering Committee</el-menu-item>
+
         <el-sub-menu index="organization">
           <template #title>Organization</template>
           <el-menu-item index="/organization/committee">Organization Committee</el-menu-item>
           <el-menu-item index="/organization/program-committee">Program Committee</el-menu-item>
-          <el-menu-item index="/organization/steering-committee">Steering Committee</el-menu-item>
         </el-sub-menu>
 
         <el-sub-menu index="contribute">

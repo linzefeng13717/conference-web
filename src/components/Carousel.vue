@@ -2,18 +2,20 @@
   <div class="carousel">
     <div class="carousel-container" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
       <div v-for="(slide, index) in slides" :key="index" class="carousel-slide">
-        <img :src="slide.image" :alt="slide.alt" class="carousel-image">
-        <!-- <div class="carousel-content">
+        <div class="img_container">
+          <img :src="slide.image" :alt="slide.alt" class="carousel-image">
+        </div>
+        <div class="carousel-content">
           <h1 class="conference-title">
-            <img src="@/assets/logo.png" alt="APPT Logo" class="hero-logo">
+            <img src="/public/images/logo.png" alt="APPT Logo" class="hero-logo">
             <span>2025</span>
           </h1>
           <h2 class="conference-date">July 13-16, 2025</h2>
           <h2 class="conference-location">Athens, Greece</h2>
-        </div> -->
+        </div>
       </div>
     </div>
-    
+
     <!-- 导航按钮 -->
     <button class="carousel-button prev" @click="prev" aria-label="Previous slide">
       <span>&lt;</span>
@@ -21,17 +23,11 @@
     <button class="carousel-button next" @click="next" aria-label="Next slide">
       <span>&gt;</span>
     </button>
-    
+
     <!-- 指示器 -->
     <div class="carousel-indicators">
-      <button
-        v-for="(_, index) in slides"
-        :key="index"
-        class="indicator"
-        :class="{ active: currentIndex === index }"
-        @click="goToSlide(index)"
-        :aria-label="'Go to slide ' + (index + 1)"
-      ></button>
+      <button v-for="(_, index) in slides" :key="index" class="indicator" :class="{ active: currentIndex === index }"
+        @click="goToSlide(index)" :aria-label="'Go to slide ' + (index + 1)"></button>
     </div>
   </div>
 </template>
@@ -59,8 +55,8 @@ const next = () => {
 }
 
 const prev = () => {
-  currentIndex.value = currentIndex.value === 0 
-    ? props.slides.length - 1 
+  currentIndex.value = currentIndex.value === 0
+    ? props.slides.length - 1
     : currentIndex.value - 1
 }
 
@@ -97,7 +93,7 @@ onUnmounted(() => {
   overflow: hidden;
   border-radius: 15px;
   margin: 0 -40px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
   .carousel-container {
     display: flex;
@@ -122,7 +118,8 @@ onUnmounted(() => {
       transform: translate(-50%, -50%);
       text-align: center;
       color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 
       .conference-title {
         font-size: 5.5rem;
@@ -143,12 +140,25 @@ onUnmounted(() => {
         }
       }
 
+
       .conference-date,
       .conference-location {
         font-size: 2rem;
         margin: 0.5rem 0;
       }
     }
+  }
+
+  .img_container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    /* 从左到右渐变：透明到70%黑色 */
+    pointer-events: none; /* 确保遮罩不会干扰鼠标事件 */
   }
 
   .carousel-button {
@@ -209,4 +219,4 @@ onUnmounted(() => {
     }
   }
 }
-</style> 
+</style>

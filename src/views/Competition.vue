@@ -1,83 +1,77 @@
 <template>
-  <page-base title="Competition">
-    <div class="competition-container">
-      <div class="competition-intro">
-        <h2>APPT 2025 Programming Competition</h2>
+  <PageBase title="Competition">
+    <div class="document-container">
+      <div class="header-section">
+        <h1>APPT 2025 Programming Competition</h1>
         <p class="description">
           Join us for an exciting programming competition focused on parallel computing and algorithm optimization.
         </p>
       </div>
 
-      <el-tabs class="competition-tabs">
-        <el-tab-pane label="Overview">
-          <div class="tab-content">
-            <h3>Competition Overview</h3>
-            <p>The competition will focus on solving real-world parallel computing challenges...</p>
-            
-            <h4>Prize Pool</h4>
-            <div class="prizes">
-              <el-card v-for="(prize, index) in prizes" :key="index" class="prize-card">
-                <h3>{{ prize.place }}</h3>
-                <p class="amount">{{ prize.amount }}</p>
-              </el-card>
-            </div>
-          </div>
-        </el-tab-pane>
+      <div class="section">
+        <h2>Overview</h2>
+        <p>The competition will focus on solving real-world parallel computing challenges...</p>
+      </div>
 
-        <el-tab-pane label="Rules">
-          <div class="tab-content">
-            <h3>Competition Rules</h3>
-            <ul class="rules-list">
-              <li v-for="(rule, index) in rules" :key="index">
-                {{ rule }}
-              </li>
-            </ul>
-          </div>
-        </el-tab-pane>
+      <div class="section">
+        <h2>Competition Rules</h2>
+        <ul>
+          <li>Teams must consist of 2-3 members</li>
+          <li>All team members must be currently enrolled students</li>
+          <li>Solutions must be implemented using provided frameworks</li>
+          <li>Code must be original and created during the competition</li>
+          <li>Teams must present their solutions to the judges</li>
+        </ul>
+      </div>
 
-        <el-tab-pane label="Registration">
-          <div class="tab-content">
-            <h3>How to Register</h3>
-            <p>Please fill out the registration form below...</p>
-            <el-button type="primary" class="register-button">
-              Register Now
-            </el-button>
-          </div>
-        </el-tab-pane>
-      </el-tabs>
+      <div class="section">
+        <h2>Prize Pool</h2>
+        <table class="prize-table">
+          <tr>
+            <td>1st Place:</td>
+            <td>$3,000</td>
+          </tr>
+          <tr>
+            <td>2nd Place:</td>
+            <td>$2,000</td>
+          </tr>
+          <tr>
+            <td>3rd Place:</td>
+            <td>$1,000</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>Registration</h2>
+        <p>Please fill out the registration form below...</p>
+        <div class="button-container">
+          <el-button type="primary" class="register-button">Register Now</el-button>
+        </div>
+      </div>
     </div>
-  </page-base>
+  </PageBase>
 </template>
 
 <script setup>
 import PageBase from '@/components/PageBase.vue'
-import { ref } from 'vue'
-
-const prizes = ref([
-  { place: '1st Place', amount: '$3,000' },
-  { place: '2nd Place', amount: '$2,000' },
-  { place: '3rd Place', amount: '$1,000' }
-])
-
-const rules = ref([
-  'Teams must consist of 2-3 members',
-  'All team members must be currently enrolled students',
-  'Solutions must be implemented using provided frameworks',
-  'Code must be original and created during the competition',
-  'Teams must present their solutions to the judges'
-])
 </script>
 
 <style lang="scss" scoped>
-.competition-container {
-  .competition-intro {
+.document-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  
+  .header-section {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 3rem;
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    h1 {
       color: #2c3e50;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
     }
 
     .description {
@@ -88,67 +82,70 @@ const rules = ref([
     }
   }
 
-  .competition-tabs {
-    .tab-content {
-      padding: 20px;
+  .section {
+    margin-bottom: 2.5rem;
 
-      h3 {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        color: #2c3e50;
-      }
+    h2 {
+      color: #2c3e50;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #eee;
+    }
 
-      h4 {
-        font-size: 1.3rem;
-        margin: 30px 0 20px;
-        color: #2c3e50;
-      }
+    p {
+      color: #333;
+      line-height: 1.6;
+      margin: 0.8rem 0;
+    }
 
-      p {
-        color: #666;
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin: 0.8rem 0;
+      
+      li {
+        color: #333;
         line-height: 1.6;
+        margin-bottom: 0.5rem;
       }
+    }
 
-      .prizes {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 20px;
-        margin-top: 20px;
+    .prize-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
 
-        .prize-card {
-          text-align: center;
-          transition: transform 0.3s;
+      tr {
+        border-bottom: 1px solid #eee;
 
-          &:hover {
-            transform: translateY(-5px);
+        &:last-child {
+          border-bottom: none;
+        }
+
+        td {
+          padding: 0.8rem;
+          line-height: 1.6;
+          color: #333;
+
+          &:first-child {
+            font-weight: bold;
+            width: 40%;
           }
 
-          h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-          }
-
-          .amount {
-            font-size: 1.5rem;
+          &:last-child {
             color: #409EFF;
             font-weight: bold;
           }
         }
       }
+    }
 
-      .rules-list {
-        list-style-type: disc;
-        padding-left: 20px;
-        
-        li {
-          margin-bottom: 10px;
-          color: #666;
-          line-height: 1.6;
-        }
-      }
+    .button-container {
+      text-align: center;
+      margin-top: 2rem;
 
       .register-button {
-        margin-top: 30px;
         padding: 12px 30px;
         font-size: 1.1rem;
       }

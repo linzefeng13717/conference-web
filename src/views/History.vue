@@ -2,7 +2,7 @@
   <PageBase title="APPT History">
     <div class="history-content">
       <h2>History and Development of APPT</h2>
-      <p class="intro">Advanced Parallel Processing Technologies (APPT) is the flagship international conference organized by the China Computer Federation (CCF) Technical Committee on Computer Architecture (TCArch). It aims to provide an ideal environment for researchers in both academia and industry to present thought-provoking ideas related to all aspects of computer architecture, computing systems, and emerging technologies.</p>
+      <p class="intro">Advanced Parallel Processing Technology (APPT) is the flagship international conference organized by the China Computer Federation (CCF) Technical Committee on Computer Architecture (TCArch). It aims to provide an ideal environment for researchers in both academia and industry to present thought-provoking ideas related to all aspects of computer architecture, computing systems, and emerging technologies.</p>
 
       <div class="history-section">
         <h3>Development Stages</h3>
@@ -83,10 +83,10 @@ const conferenceHistory = ref([
   { time: 'Sep 26-27, 2011', location: 'Shanghai, China', chairs: 'Olivier Temam, Pen-Chung Yew, Binyu Zang' },
   { time: 'Aug 27-28, 2013', location: 'Stockholm, Sweden', chairs: 'Chenggang Wu, Albert Cohen' },
   { time: 'Aug 20-21, 2015', location: 'Jinan, China', chairs: 'Yunji Chen, Paolo Lenne, Qing Ji' },
-  { time: 'Aug 29-29, 2017', location: 'Santiago de Compostela, Spain', chairs: 'Yong Dou, Haixiang Lin, Guangyu Sun, Junjie Wu, Dora Heras, Luc Bougé' },
-  { time: 'Aug 15-16, 2019', location: 'Tianjin, China', chairs: 'Pen-Chung Yew, Per Stenström, Junjie Wu, Xiaoli Gong, Tao Li' },
+  { time: 'Aug 29-29, 2017', location: 'Santiago de Compostela, Spain', chairs: 'Guangyu Sun, Yiran Chen' },
+  { time: 'Aug 15-16, 2019', location: 'Tianjin, China', chairs: 'Pen-Chung Yew, Per Stenström' },
   { time: 'Dec 09-15, 2021', location: 'Online', chairs: 'Chao Li, Yun Liang, Xuehai Qian, Amro Awad' },
-  { time: 'Aug 04-06, 2023', location: 'Nanchang, China', chairs: 'Chao Li, Zhenhua Li, Li Shen, Fan Wu, Xiaoli Gong' }
+  { time: 'Aug 04-06, 2023', location: 'Nanchang, China', chairs: 'Chao Li, Zhenhua Li, Li Shen, Fan Wu' }
 ])
 
 const upcomingConferences = ref([

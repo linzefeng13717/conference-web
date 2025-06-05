@@ -8,6 +8,11 @@
         </p>
 
         <p>
+          If you wish to submit, please submit the abstract before <span style="color: red;">April 6th</span> and the full paper before <span style="color: red;">April 13th</span>.
+        </p>
+
+
+        <p>
           <b>The submission web page for APPT 2025 is:</b><br/>
           <a href="https://submission.appt-conference.com/"><b>https://submission.appt-conference.com/</b></a>
         </p>

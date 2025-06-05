@@ -11,7 +11,7 @@
       <div class="about-section">
         <h2>About APPT</h2>
         <p class="about-text">
-          Since its establishment in 1995, APPT has evolved into an ideal international forum for presenting thought-provoking ideas and advancing the frontiers of computing systems. This year, the theme of the conference is <b>Computing Reimagined</b>. APPT-2025 will mainly focus on the multidisciplinary challenges and innovations shaping the future of computer architecture and intelligent computing. The conference invites original contributions spanning theoretical breakthroughs, system-level optimizations, and real-world applications.
+          Welcome to the website of the 16th International Symposium on Advanced Parallel Processing Technology (APPT). Since its establishment in 1995, APPT has evolved into an ideal international forum for presenting thought-provoking ideas and advancing the frontiers of computing systems. This year, the theme of the conference is <b>Computing Reimagined</b>. APPT-2025 will mainly focus on the multidisciplinary challenges and innovations shaping the future of computer architecture and intelligent computing. The conference invites original contributions spanning theoretical breakthroughs, system-level optimizations, and real-world applications.
         </p>
         <p class="slogan">See you all in Athens!</p>
       </div>
@@ -22,8 +22,11 @@
           <div class="section-card">
             <h2>Announcements</h2>
             <ul class="announcement-list">
-              <li v-for="(announcement, index) in announcements" :key="index">
-                {{ announcement }}
+              <li v-for="(announcement, index) in announcements" 
+                  :key="index"
+                  @click="showAnnouncementDetail(announcement)"
+                  class="announcement-item">
+                <span class="announcement-title">{{ announcement.title }}</span>
               </li>
             </ul>
           </div>
@@ -42,6 +45,20 @@
         </div>
       </div>
     </div>
+
+    <!-- 添加对话框组件 -->
+    <el-dialog
+      v-model="dialogVisible"
+      :title="selectedAnnouncement?.title"
+      width="50%"
+      class="announcement-dialog"
+      :close-on-click-modal="true"
+      :show-close="false">
+      <div class="dialog-content">
+        <!-- <p class="dialog-date">{{ selectedAnnouncement?.date }}</p> -->
+        <div class="dialog-body" v-html="selectedAnnouncement?.content"></div>
+      </div>
+    </el-dialog>
   </div>
 </template>
 
@@ -66,17 +83,55 @@ const carouselSlides = ref([
 ])
 
 const importantDates = ref([
-  { event: "Paper Submission (Abstracts)", date: "March 31, 2025" },
-  { event: "Paper Submission (Full Paper)", date: "April 06, 2025" },
+  { event: "Paper Submission (Abstracts)", date: "April 06, 2025" },
+  { event: "Paper Submission (Full Paper)", date: "April 13, 2025" },
   { event: "Paper Notification", date: "April 27, 2025" },
   { event: "Workshop/Tutorial Proposal", date: "March 31, 2025" },
 ])
 
+const dialogVisible = ref(false)
+const selectedAnnouncement = ref(null)
+
+// 修改announcements数据结构
 const announcements = ref([
-  "Conference registration is now open",
-  "Call for papers released",
-  "Important updates about submission deadlines"
+  {
+    title: "Conference registration is now open",
+    date: "2025-01-15",
+    content: `
+      <p>We are pleased to announce that registration for APPT 2025 is now open!</p>
+      <p>For more information, please visit our registration page.</p>
+    `
+  },
+  {
+    title: "Call for papers released",
+    date: "2025-01-10",
+    content: `
+      <p>The Call for Papers for APPT 2025 is now available!</p>
+    `
+  },
+  {
+    title: "Important updates about submission deadlines",
+    date: "2025-01-05",
+    content: `
+    `
+  },
+  {
+    title: "Updated Deadline",
+    date: "2025-01-05",
+    content: `
+      <p>Please note the following important deadlines:</p>
+      <ul>
+        <li>Abstract Submission: <b>April 06, 2025</b></li>
+        <li>Full Paper Submission: <b>April 13, 2025</b></li>
+      </ul>
+      `
+  }
 ])
+
+const showAnnouncementDetail = (announcement) => {
+  selectedAnnouncement.value = announcement
+  dialogVisible.value = true
+}
 </script>
 
 <style lang="scss" scoped>
@@ -247,6 +302,73 @@ const announcements = ref([
 
       .date {
         color: #666;
+      }
+    }
+  }
+}
+
+.announcement-item {
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: rgba(0, 67, 128, 0.05);
+    transform: translateX(5px);
+  }
+
+  .announcement-title {
+    font-weight: 500;
+    color: #004380;
+  }
+}
+
+:deep(.announcement-dialog) {
+  .el-dialog__header {
+    background-color: #004380;
+    margin: 0;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+
+    .el-dialog__title {
+      color: white;
+      font-size: 1.2rem;
+    }
+
+    .el-dialog__headerbtn {
+      .el-dialog__close {
+        color: white;
+      }
+    }
+  }
+
+  .el-dialog__body {
+    padding: 30px;
+
+    .dialog-content {
+      .dialog-date {
+        color: #666;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+
+      .dialog-body {
+        line-height: 1.6;
+
+        h4 {
+          color: #004380;
+          margin: 20px 0 10px;
+        }
+
+        ul {
+          padding-left: 20px;
+          margin: 10px 0;
+        }
+
+        p {
+          margin: 10px 0;
+        }
       }
     }
   }

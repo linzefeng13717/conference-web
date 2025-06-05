@@ -11,7 +11,7 @@
                    class="member-card">
             <div class="member-info">
               <div class="avatar">
-                <el-avatar :size="80" :src="peopleImage"/>
+                <el-avatar :size="80" :src="getMemberImage(member.name)"/>
               </div>
               <div class="details">
                 <h3>{{ member.name }}</h3>
@@ -28,6 +28,20 @@
 <script setup>
 import PageBase from '@/components/PageBase.vue'
 import { ref } from 'vue'
+
+const getMemberImage = (name) => {
+    // 特殊情况处理
+    const specialCases = {
+      'Stéphane Zuckerman': 'Stephane Zuckerman'
+    }
+  
+    // 检查是否是特殊情况
+    const imageName = specialCases[name] || name
+  
+    const format = '.png'
+    
+    return `/images/OrganizationCommittee/${imageName}${format}`
+  }
 
 defineProps({
   peopleImage: {
@@ -60,7 +74,7 @@ const committees = ref([
   {
     title: "Local Arrangement Chair",
     members: [
-      { name: "George Papadimitriou", affiliation: "University of Athens" }
+      { name: "George Papadimitriou", affiliation: "University of Patras" }
     ]
   },
   {

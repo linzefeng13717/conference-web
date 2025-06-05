@@ -43,7 +43,9 @@
       'Jack Dongarra': 'jack-dongarra',
       'Raikumar Buyya': 'Raikumar Buvya',
       'Schahram Dustdar': 'Schahram Dustdar,',
-      'Yunji Chen': 'yunji chen'
+      'Yunji Chen': 'yunji chen',
+      'Jack Dongarra(co-Chair)': 'jack-dongarra',
+      'Yunji Chen(co-Chair)': 'yunji chen'
     }
   
     // 检查是否是特殊情况
@@ -60,7 +62,7 @@
     // 获取文件扩展名，默认为 .jpg
     const format = formats[name] || '.jpg'
     
-    return `/images/${imageName}${format}`
+    return `/images/SteeringCommittee/${imageName}${format}`
   }
   
   // 修改默认头像
@@ -75,13 +77,15 @@
     {
       title: "Committee Members",
       members: [
+
+        { name: "Jack Dongarra(co-Chair)", affiliation: "University of Tennessee" },   
+        { name: "Yunji Chen(co-Chair)", affiliation: "Chinese Academy of Sciences" },      
         { name: "Ahmed Louri", affiliation: "George Washington University" },
         { name: "Albert Zomaya", affiliation: "The University of Sydney" },
         { name: "Anand Sivasubramaniam", affiliation: "Penn State University" },
         { name: "Bingsheng He", affiliation: "National University of Singapore" },
         { name: "Dean Tullsen", affiliation: "University of California, San Diego" },
         { name: "Hai Jin", affiliation: "Huazhong University of Science and Technology" },
-        { name: "Jack Dongarra", affiliation: "University of Tennessee" },
         { name: "Jean-Luc Gaudiot", affiliation: "University of California, Irvine" },
         { name: "Jiwu Shu", affiliation: "Tsinghua University" },
         { name: "Josep Torrellas", affiliation: "University of Illinois at Urbana-Champaign" },
@@ -94,7 +98,6 @@
         { name: "Xian-He Sun", affiliation: "Illinois Institute of Technology" },
         { name: "Yiran Chen", affiliation: "Duke University" },
         { name: "Yuan Xie", affiliation: "University of California, Santa Barbara" },
-        { name: "Yunji Chen", affiliation: "Chinese Academy of Sciences" }
       ]
     }
   ])

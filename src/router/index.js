@@ -80,6 +80,11 @@ const router = createRouter({
           path: 'posters-demo',
           name: 'PostersDemo',
           component: () => import('@/views/parallel-events/PostersDemo.vue')
+        },
+        {
+          path: 'artifact',
+          name: 'Artifact',
+          component: () => import('@/views/parallel-events/Artifact.vue')
         }
       ]
     },

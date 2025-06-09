@@ -39,6 +39,7 @@
           <el-menu-item index="/parallel-events/phd-forum">PhD Forum</el-menu-item>
           <el-menu-item index="/parallel-events/competition">Student Competition</el-menu-item>
           <el-menu-item index="/parallel-events/posters-demo">Posters and Demo</el-menu-item>
+          <el-menu-item index="/parallel-events/artifact">Artifact</el-menu-item>
         </el-sub-menu>
 
         <el-menu-item index="/keynote">Keynote</el-menu-item>
